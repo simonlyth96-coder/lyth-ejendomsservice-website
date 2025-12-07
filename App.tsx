@@ -1,10 +1,10 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import VoiceBooking from './components/VoiceBooking';
-import Services from './components/Services';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Navbar from './Navbar';
+import Hero from './Hero';
+import VoiceBooking from './VoiceBooking';
+import Services from './Services';
+import Contact from './Contact';
+import Footer from './Footer';
 
 function App() {
   return (

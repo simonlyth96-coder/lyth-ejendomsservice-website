@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { NAV_LINKS } from '../constants';
+import { NAV_LINKS } from './constants';
 import { Home, Menu, X } from 'lucide-react';
 
 const Navbar: React.FC = () => {

@@ -1,0 +1,7 @@
+{
+  "name": "Lyth Ejendomsservice - Eco-Futurism model 1",
+  "description": "A modern, eco-futuristic property service application featuring AI voice booking and glassmorphism UI.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

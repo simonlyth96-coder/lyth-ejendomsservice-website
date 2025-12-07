@@ -1,5 +1,5 @@
 import React from 'react';
-import { SERVICES, ICONS } from '../constants';
+import { SERVICES, ICONS } from './constants';
 import { Coins } from 'lucide-react';
 
 const Services: React.FC = () => {
@@ -13,10 +13,9 @@ const Services: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {SERVICES.map((service) => (
-            <div 
+            <div
               key={service.id}
-              className="group p-8 rounded-2xl bg-[#063d25] border border-transparent hover:border-[#00d66b] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(0,0,0,0.3)]"
-            >
+              className="group p-8 rounded-2xl bg-[#063d25] border border-transparent hover:border-[#00d66b] transition-all duration-300 hover:translate-y-[-10px] hover:shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
               <div className="mb-6 w-14 h-14 rounded-full bg-[#022c19] flex items-center justify-center group-hover:bg-[#00d66b]/10 transition-colors">
                 {ICONS[service.icon]}
               </div>
@@ -31,30 +30,16 @@ const Services: React.FC = () => {
         </div>
 
         {/* Pricing Banner */}
-        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#0a4f32] to-[#022c19] border border-[#00d66b]/20 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#00d66b]/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
-          
-          <div className="flex items-start gap-6 relative z-10">
-            <div className="w-16 h-16 rounded-full bg-[#00d66b]/20 flex items-center justify-center shrink-0">
-               <Coins className="w-8 h-8 text-[#00d66b]" />
-            </div>
-            <div>
-              <h3 className="text-2xl font-display font-bold text-white mb-2">Gennemskuelige Priser</h3>
-              <p className="text-gray-300 max-w-lg">
-                Vi tror på ærlighed og kvalitet. Vores priser er konkurrencedygtige og tilpasset opgavens art, så du altid ved, hvad du betaler for.
-              </p>
-            </div>
+        <div className="bg-gradient-to-r from-[#063d25] to-[#0a4f32] rounded-2xl p-8 text-center border border-[#00d66b]/20">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <Coins className="w-8 h-8 text-[#00d66b]" />
+            <h3 className="font-display text-3xl font-bold text-white">Priser</h3>
           </div>
-
-          <div className="text-center md:text-right relative z-10">
-            <p className="text-gray-400 text-sm uppercase tracking-widest font-bold mb-1">Timepris fra</p>
-            <div className="text-4xl md:text-5xl font-display font-bold text-white mb-2">
-              350 - 450 <span className="text-xl text-[#00d66b]">kr.</span>
-            </div>
-            <p className="text-gray-400 text-sm">ekskl. moms</p>
-          </div>
+          <p className="text-white text-xl mb-2">
+            <span className="font-bold text-[#00d66b]">350 - 450 kr.</span> pr. time
+          </p>
+          <p className="text-gray-300 text-sm">Eksklusiv moms</p>
         </div>
-
       </div>
     </section>
   );
